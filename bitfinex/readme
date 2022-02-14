@@ -1,0 +1,21 @@
+docker exec -it js_app_bitfinex bash -c "cd /home/vpsadmin/bitfinex/;node balance.js"
+
+docker build . -t iblzgn/node-app-bitfinex
+  492  docker run -d iblzgn/node-app-bitfinex
+  497  docker exec -it iblzgn/node-app-bitfinex /bin/bash
+  534  docker rm iblzgn/node-app-bitfinex
+  535  docker image rm iblzgn/node-app-bitfinex
+  537  docker build . -t iblzgn/node-app-bitfinex
+  540  docker run -d iblzgn/node-app-bitfinex
+  701  docker -it iblzgn/node-app-bitfinex
+  702  docker run -it iblzgn/node-app-bitfinex
+  705  docker run -d iblzgn/node-app-bitfinex
+  721  docker stop iblzgn/node-app-bitfinex
+  725  docker image rm iblzgn/node-app-bitfinex
+  726  docker image rm iblzgn/node-app-bitfinex -f
+  728  docker build . -t iblzgn/node-app-bitfinex
+  731  docker run -itd --restart unless-stopped iblzgn/node-app-bitfinex
+  748  docker build . -t iblzgn/node-app-bitfinex
+  749  docker run -itd --restart unless-stopped iblzgn/node-app-bitfinex
+  764  docker run -itd --restart unless-stopped iblzgn/node-app-bitfinex
+  818  docker run -it iblzgn/node-app-bitfinex

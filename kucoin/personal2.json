@@ -1,0 +1,35 @@
+"200000"
+[
+  {
+    "id": "619a9f14c109450001f99c59",
+    "currency": "BTC",
+    "type": "trade",
+    "balance": "0.031224",
+    "available": "0.00001565",
+    "holds": "0.03120835"
+  },
+  {
+    "id": "619f6368729f5f0001a267d3",
+    "currency": "BTC3L",
+    "type": "trade",
+    "balance": "191.54",
+    "available": "191.54",
+    "holds": "0"
+  },
+  {
+    "id": "619aa16f746129000149ecf7",
+    "currency": "USDT",
+    "type": "trade",
+    "balance": "0.25571611",
+    "available": "0.25571611",
+    "holds": "0"
+  },
+  {
+    "id": "619a9c13d5a5cf000135f905",
+    "currency": "BTC",
+    "type": "main",
+    "balance": "0",
+    "available": "0",
+    "holds": "0"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "name": "bitfinex",
+  "version": "1.0.0",
+  "description": "Super script",
+  "main": "balance.js",
+  "scripts": {
+    "start": "node balance.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "fs": "0.0.1-security",
+    "http": "0.0.1-security",
+    "import-http": "^0.3.1",
+    "node-fetch": "^2.6.7",
+    "pg": "^8.7.1",
+    "ws": "^8.4.2"
+  }
+}
