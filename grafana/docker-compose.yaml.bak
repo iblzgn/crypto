@@ -1,0 +1,24 @@
+version: '3.1'
+
+services:
+ grafana:
+  image: grafana/grafana-enterprise
+  restart: always
+  environment:
+      - VIRTUAL_HOST=it-boutique.ru # adjust to match your domain name
+      - VIRTUAL_PROTO=https
+      - VIRTUAL_PORT=3000
+      - GF_SERVER_CERT_FILE=/etc/grafana/x.crt # adjust to match your domain name
+      - GF_SERVER_CERT_KEY=/etc/grafana/x.key # adjust to match your domain name
+      - GF_SERVER_PROTOCOL=https
+  volumes:
+    - grafana-storage:/var/lib/grafana
+    - /home/vpsadmin/it-boutique.ru/site/certbot/conf/live/it-boutique.ru/fullchain.pem:/etc/grafana/x.crt
+    - /home/vpsadmin/it-boutique.ru/site/certbot/conf/live/it-boutique.ru/privkey.pem:/etc/grafana/x.key
+  ports:
+    - 3000:3000
+  user: '472'
+
+volumes:
+  grafana-storage:
+        external: true
