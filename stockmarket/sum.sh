@@ -2,6 +2,9 @@
 
 #sleep 15
 
+export PGPASSWORD='Jbdyg&,bdv^dhjT';
+
+
 #RSHB
 gazprshbcount=20
 sgzhrshbcount=200
@@ -17,7 +20,7 @@ kzosvtbcount=100
 rosnvtbcount=50
 mrkzvtbcount=310000
 enruvtbcount=15000
-rubvtb=3671.62
+rubvtb=$(psql -d "bitfinex" -h "10.0.0.4" -U "bitfinexuser" --quiet -tA -c "select balance from walletstatus where type = 'vtbrubcount';")
 #BCS
 enrubcscount=9000
 afksbcscount=500
@@ -29,6 +32,7 @@ ogkbbcscount=10000
 sberbcscount=40
 rubbcs=2029.96
 
+#echo $rubvtb
 
 
 
@@ -93,7 +97,7 @@ summa=$(bc<<<"scale=3;$rshbsummary+$vtbsummary+$bcssummary")
 #echo $bcssummary
 
 
-time=$(date +"%Y-%m-%d %H:%M:%S")
+time=$(date +"%Y-%m-%d %H:%M:%S%Z")
 export PGPASSWORD='Jbdyg&,bdv^dhjT'; psql -d "bitfinex" -h "10.0.0.4" -U "bitfinexuser" -c "INSERT INTO rshbsummary(timedate, balance)VALUES('$time', $rshbsummary);"
 
 export PGPASSWORD='Jbdyg&,bdv^dhjT'; psql -d "bitfinex" -h "10.0.0.4" -U "bitfinexuser" -c "INSERT INTO vtbsummary(timedate, balance)VALUES('$time', $vtbsummary);"

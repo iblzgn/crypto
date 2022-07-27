@@ -5,7 +5,9 @@ services:
   image: postgres
   restart: always
   environment:
-   POSTGRES_PASSWORD: Jd7Lbd4KdjbJy7@d
+    TZ: Europe/Samara
+    PGTZ: Europe/Samara
+    POSTGRES_PASSWORD: Jd7Lbd4KdjbJy7@d
   volumes:
     - /home/vpsadmin/postgresql/data:/var/lib/postgresql/data
   ports:
